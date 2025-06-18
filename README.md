@@ -12,7 +12,7 @@ A simple text editor built with **Qt** and **C++**. It supports basic functional
 
 ## 🖼️ Interface
 
-> *(Screenshots can be added here. Let me know if you’d like help preparing and adding them.)*
+![Screenshot](images/screenshot.png)
 
 ## 🔧 Build Instructions
 
