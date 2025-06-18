@@ -40,6 +40,12 @@ private slots:
 
     void on_actionBold_triggered();
 
+    void on_actionCopy_triggered();
+
+    void on_actionCut_triggered();
+
+    void on_actionPaste_triggered();
+
     void save();
 
     void saveAs();
@@ -56,8 +62,15 @@ private slots:
 
     void setBold();
 
+    void copy();
+
+    void cut();
+
+    void paste();
+
 private:
     QString currentFilePath;
+    QString buffer;
     bool isModified = false;
 
     bool maybeSave();
