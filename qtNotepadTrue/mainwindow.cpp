@@ -18,6 +18,12 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionItalic, &QAction::triggered, this, &MainWindow::on_actionItalic_triggered);
     disconnect(ui->actionBold, nullptr, nullptr, nullptr);
     connect(ui->actionBold, &QAction::triggered, this, &MainWindow::on_actionBold_triggered);
+    disconnect(ui->actionCopy, nullptr, nullptr, nullptr);
+    connect(ui->actionCopy, &QAction::triggered, this, &MainWindow::on_actionCopy_triggered);
+    disconnect(ui->actionCut, nullptr, nullptr, nullptr);
+    connect(ui->actionCut, &QAction::triggered, this, &MainWindow::on_actionCut_triggered);
+    disconnect(ui->actionPaste, nullptr, nullptr, nullptr);
+    connect(ui->actionPaste, &QAction::triggered, this, &MainWindow::on_actionPaste_triggered);
 }
 
 MainWindow::~MainWindow()
@@ -50,13 +56,23 @@ void MainWindow::on_actionDark_view_triggered(){
 }
 
 void MainWindow::on_actionItalic_triggered(){
-    qDebug() << "Italic clicked";
     setItalic();
 }
 
 void MainWindow::on_actionBold_triggered(){
-    qDebug() << "Bold clicked";
     setBold();
+}
+
+void MainWindow::on_actionCopy_triggered(){
+    copy();
+}
+
+void MainWindow::on_actionCut_triggered(){
+    cut();
+}
+
+void MainWindow::on_actionPaste_triggered(){
+    paste();
 }
 
 void MainWindow::save() {
@@ -236,10 +252,36 @@ void MainWindow::setItalic() {
     isModified = true;
 }
 
+void MainWindow::copy(){
+    QTextCursor cursor = ui->textEdit->textCursor();
+    buffer.clear();
 
+    if(cursor.hasSelection()){
+        buffer = cursor.selectedText();
+    }
+}
 
+void MainWindow::cut(){
+    QTextCursor cursor = ui->textEdit->textCursor();
+    buffer.clear();
 
+    if(cursor.hasSelection()){
+        buffer = cursor.selectedText();
+        cursor.removeSelectedText();
+    }
+}
 
+void MainWindow::paste(){
+    if(buffer.isEmpty()) return;
+    QTextCursor cursor = ui->textEdit->textCursor();
 
+    if(cursor.hasSelection()){
+        cursor.removeSelectedText();
+        cursor.insertText(buffer);
+    }
+    else{
+        cursor.insertText(buffer);
+    }
+}
 
 
