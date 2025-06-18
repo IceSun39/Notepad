@@ -1,0 +1,9 @@
+D:/qtProjects/qtNotepadTrue/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/qtNotepadTrue.dir
+D:/qtProjects/qtNotepadTrue/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+D:/qtProjects/qtNotepadTrue/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+D:/qtProjects/qtNotepadTrue/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+D:/qtProjects/qtNotepadTrue/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/install.dir
+D:/qtProjects/qtNotepadTrue/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+D:/qtProjects/qtNotepadTrue/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+D:/qtProjects/qtNotepadTrue/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/qtNotepadTrue_autogen_timestamp_deps.dir
+D:/qtProjects/qtNotepadTrue/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/qtNotepadTrue_autogen.dir
